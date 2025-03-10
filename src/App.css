@@ -1,0 +1,38 @@
+.hero-card {
+  max-width: 208px;
+  overflow: hidden;
+  height: 353px;
+  transition: all 300ms ease-in-out;
+}
+.hero-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.transition {
+  transition: all 300ms ease-in-out;
+}
+.navBtn {
+  padding: 8px 16px;
+}
+.navBtn:hover {
+  background-color: #1c64f2;
+  color: white;
+}
+.filterBtn {
+  border: 1px solid black;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.filterBtn:hover {
+  background: orange;
+  color: white;
+  border-color: orange;
+}
+.selectFilterBtn {
+  border-color: orange;
+  color: white;
+  background: orange;
+}
