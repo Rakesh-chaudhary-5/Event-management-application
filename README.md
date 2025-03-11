@@ -32,13 +32,14 @@ Users can easily create events and view them dynamically in the event section.
 
 🚏 React Router for navigation
 
-🖼️ Screenshots
 
-🏠 Home Page
-(/public/img1.png)
+## 🖼️ Screenshots
 
-📅 Event Page
-(/public/img2.png)
+### 🏠 Home Page
+![Home Page](./public/img1.png)
 
-✍️ Create Event Page
-(/public/img3.png)
+### 📅 Event Page
+![Event Page](./public/img2.png)
+
+### ✍️ Create Event Page
+![Create Event Page](./public/img3.png)
