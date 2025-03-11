@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import "../App.css";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { EventContext } from "../contexts/EventContext";
+import eventData from "../assets/Data/eventData";
 
 export default function Events() {
-  const { createdEvents } = useContext(EventContext);
+  const { createdEvents, setCreatedEvents } = useContext(EventContext);
   const [selectCategory, setSelectCategory] = useState("");
 
   const handleFilter = (el) => {
@@ -12,11 +13,17 @@ export default function Events() {
     setSelectCategory(el.target.value);
   };
 
+  useEffect(() => {
+    if (createdEvents.length <= 0) {
+      setCreatedEvents(eventData);
+      localStorage.setItem("eventDetail", JSON.stringify(eventData));
+    }
+  }, []);
+
+  // filtering events by category
   const filteredEvents = createdEvents.filter(
     (el) => selectCategory === "" || el?.category === selectCategory
   );
-
-  console.log(filteredEvents);
 
   return (
     <div
